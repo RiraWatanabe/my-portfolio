@@ -1,0 +1,233 @@
+*{ box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+}
+body {
+    background:rgb(195, 164, 130);
+    color: rgb(245, 245, 247);
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    padding: 0px 30px;
+    background:rgb(95, 163, 95);
+    height: 75px;
+    top: 0;
+}
+.title-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 30px;
+}
+
+nav  {
+    display: flex;
+    gap: 28px;
+}
+section {
+    padding: 10px 30px;
+}
+footer {
+    padding: 20px 30px;
+    font-size: 11px;
+}
+nav a:hover {
+    color:rgb(236, 36, 36)
+}
+*/
+#top {
+    padding-top: 75px;
+}
+
+#top img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Works */
+#works-grid {
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    gap: 30px;
+}
+.work-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+}
+
+.work-card {
+    border: 1px solid rgb(160, 119, 25)
+}
+.work-card h4{
+    margin: 15px 15px 5px;
+}
+.work-card p {
+    margin: 0 15px 15px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.work-card:hover {
+    opacity: 0,7;
+}
+.works-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.works-controls select {
+    padding: 10px;
+    font-size: 16px;
+}
+.work-category {
+    font-size: 4px;
+    padding-top: 14px;
+    color:rgb(200, 166, 125);
+}
+.work-year {
+    font-size: 10px;
+    margin-top: 10px;
+}
+/* スマートフォン */
+@media screen and (max-width: 600px) {
+    #top {
+        padding-top: 80px;
+    }
+
+    #top img {
+        width: 100%;
+    }
+
+    #works-grid {
+        grid-template-columns: ifr;
+    }
+
+    #works-controls {
+        flex-direction: column;
+
+    }
+}
+/* 天気 */
+#weather-icon {
+    font-size: 60px;
+    margin: 0;
+}
+/* 晴れ */
+body.weather-sunny {
+    background-color: rgb(195, 164, 130)
+}
+body.weather-sunny .site-header {
+    background-color: rgb(195, 164, 130)
+}
+/* 曇り */
+body.weather-cloudy {
+    background-color:rgb(195, 164, 130)
+}
+body.weather-cloudy .site-header {
+    background-color:rgb(195, 164, 130)
+}
+/* 雨 */
+body.weather-rainy {
+    background-color:rgb(195, 164, 130)
+}
+body.weather-rainy .site-header {
+    background-color:rgb(195, 164, 130)
+}
+/* 雪 */
+body.weather-snow {
+    background-color:rgb(195, 164, 130)
+}
+body.weather-snow .site-header {
+    background-color:rgb(195, 164, 130)
+}
+
+:root {
+  --forest-bg: #ad9478;
+  --forest-dark: #4b563c;
+  --forest-green: #697851;
+  --forest-cream: #ba9a54;
+  --forest-line: #89724f;
+  --acorn: #d5bd96;
+}
+.work-card,
+.work-item,
+.works-card {
+  background: #b9a084;
+  border: 1px solid rgba(76, 82, 53, 0.5);
+  border-radius: 48px 48px 18px 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(66, 49, 30, 0.10);
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.work-card:hover,
+.work-item:hover,
+.works-card:hover {
+  transform: translateY(-7px) rotate(-1deg);
+  box-shadow: 0 14px 24px rgba(66, 49, 30, 0.2);
+}
+
+/* 写真 */
+.work-card img,
+.work-item img,
+.works-card img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  display: block;
+}
+
+/* カード内の余白 */
+.work-info,
+.work-content {
+  padding: 20px;
+}
+
+/* 作品名 */
+.work-card h3,
+.work-item h3,
+.works-card h3 {
+  color: #fff7e9;
+  line-height: 1.6;
+}
+
+/* 説明文 */
+.work-card p,
+.work-item p,
+.works-card p {
+  color: #fff3df;
+  line-height: 1.8;
+}
+
+/* セレクトボックス */
+select {
+  border: 1px solid rgb(95, 163, 95);
+  border-radius: 10px;
+  padding: 12px 16px;
+  background: rgb(95, 163, 95);
+  color: rgb(229, 235, 231);
+}
+
+/* スマホ */
+@media (max-width: 600px) {
+  .work-grid,
+  .works-grid,
+  .works-list {
+    grid-template-columns: 1fr;
+  }
+}
