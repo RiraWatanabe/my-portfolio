@@ -32,6 +32,10 @@ header {
   padding: 0 30px;
 }
 
+body {
+  text-align: center;
+}
+
 nav  {
     display: flex;
     gap: 28px;
